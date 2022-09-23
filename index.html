@@ -1,16 +1,178 @@
 <!DOCTYPE html>
-
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/mml-chtml.js">
+</script>
 <html>
 
 <head>
-  
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:title" content="That Sounds Right: Auditory Self-Supervision for Dynamic Robot Manipulation">
+  <meta property="og:description" content="That Sounds Right: Auditory Self-Supervision for Dynamic Robot Manipulation">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="That Sounds Right: Auditory Self-Supervision for Dynamic Robot Manipulation">
+  <!-- <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="That Sounds Right: Auditory Self-Supervision for Dynamic Robot Manipulation">
+  <meta name="twitter:description"
+    content="We propose a new imitation learning algorithm that substantially improves sample efficiency for continuous control problems in simulation and on real-world robotic manipulation tasks.">
+  <meta name="twitter:image" content="./mfiles/arch bet.001.png" /> -->
+  <!-- <link rel="shortcut icon" href="img/favicon.png"> -->
+  <link rel="stylesheet" href="css/simple-grid.css">
   <title>That Sounds Right: Auditory Self-Supervision for Dynamic Robot Manipulation</title>
 </head>
 
 <body>
-  
-          <h1>That Sounds Right: Auditory Self-Supervision for Dynamic Robot Manipulation</h1>
+  <div class="jumbotron">
+    <div class="container">
+      <div class="row">
+        <div class="col-13 center">
+          <h1>That Sounds Right: <br> Auditory Self-Supervision for <br> Dynamic Robot Manipulation</h1>
+        </div>
+        <div class="col-3 hidden-sm"></div>
+        <div class="col-2 center">
+          <a style="text-decoration: none" href="ARXIV LINK" download>
+            <h3 style="color: #336699; margin-top: -30%; margin-bottom:-45%">Paper</h3>
+          </a>
+        </div>
+        <div class="col-2 center">
+          <a style="text-decoration: none" href="DATA" download>
+            <h3 style="color: #336699; margin-top: -30%; margin-bottom:-45%">Data</h3>
+          </a>
+        </div>
+        <div class="col-2 center">
+          <a style="text-decoration: none" href="CODE" download>
+            <h3 style="color: #336699; margin-top: -30%; margin-bottom:-45%">Code</h3>
+          </a>
+        </div>
+      </div>
+
+      <!-- Author names -->
+      <div class="row center">
+
+        <div class="col-6 center">
+          <a style="text-decoration: none">
+            <h3 style="margin-bottom:-20px">Abitha Thankaraj</h3>
+            <p>New York University</p>
+          </a>
+        </div>
         
+        <div class="col-6 center">
+          <a style="text-decoration: none">
+            <h3 style="margin-bottom:-20px">Lerrel Pinto</h3>
+            <p>New York University</p>
+          </a>
+        </div>
+      </div>
+      
+      <!--Intro video-->
+      <div class="intro-vid">
+        <div class="container">
+          <div class="col-12">
+
+            <body>
+              <iframe width="711" height="400" src="mfiles/submission-hq.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </body>
+          </div>
+        </div>
+      </div>
+
+      <!--Abstract-->
+      <div class="row">
+        <div class="col-12">
+          <!-- <h2 class="center m-bottom">Abstract</h2> -->
+          <p>
+            Learning to produce contact-rich, dynamic behaviors from raw sensory data has been a 
+            longstanding challenge in robotics. Prominent approaches primarily focus on using visual or tactile sensing, 
+            where unfortunately one fails to capture high-frequency interaction, while the other can be too delicate for 
+            large-scale data collection. In this work, we propose 'Audio Robot Learning' (AuRL) a data-centric approach to dynamic manipulation that uses an often 
+            ignored source of information: sound. We first collect a dataset of 25k interaction-sound pairs across five dynamic tasks
+            using commodity contact microphones. Then, given this data, we leverage self-supervised learning to accelerate 
+            behavior prediction from sound. Our experiments indicate that this self-supervised 'pretraining' is crucial 
+            to achieving high performance, with a 34.5% lower MSE than plain supervised learning and 
+            a 54.3% lower MSE over visual training. Importantly, we find that when asked to generate desired
+            sound profiles, online rollouts of our models on a UR10 robot can produce dynamic behavior 
+            that achieves an average of 11.5% improvement over supervised learning on audio similarity metrics.
+
+          </p>
+        </div>
+      </div>
+    </div>
+    
+    <!--Image-->
+    <div class="container">
+      <div class="row">
+        <div class="col-12">
+
+          <h2 class="center m-bottom">Dataset</h2>
+          <p>
+            We collect a dataset of 25k interaction-sound pairs across five dynamic tasks using commodity contact microphones
+            </p>
+        </div>
+      
+      </div>
+
+      <div class="row">
+        <!-- <div class="col-1 hidden-sm"></div>
+
+
+        <div class="col-2 hidden-sm">
+
+
+        </div>
+        <div class="col-2 hidden-sm">
+
+        </div>
+        <div class="col-2 hidden-sm">
+
+        </div>
+        <div class="col-2 hidden-sm">
+
+        </div>
+        <div class="col-2 hidden-sm"> -->
+          <div class="col-12 center" style="overflow: hidden;">
+
+          <video id="tasks" width="705" height="400" preload="metadata" src="mfiles/website-tasks.mp4#t=18" type="video/mp4" style=" margin-top: -12.2%; margin-bottom: -13.2%"frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; autoplay" allowfullscreen ><video>
+            <script>
+              var el = document.getElementById('tasks');
+              el.addEventListener('play', () => {
+                  el.currentTime = 0;
+              }, { once: true });
+          </script>
+        </div>
+        </div>
+      </div>
+
+
+    </div>
+    <div class="row">
+      <h2 class="center m-bottom">Method</h2>
+
+      <div class="center img">
+        <img src="./mfiles/arch.jpg" style="max-width:1500px;width:50%" frameborder="0"
+          allowfullscreen/>
+      </div>
+    </div>
+
+    <!--Method-->
+    <div class="container">
+      <div class="row">
+        <h2 class="center m-bottom">Results</h2>
+        <div class="col-12">
+          <p> Our key results are as follows :
+          <ul style="font-size: 1.125rem;font-weight: 200;line-height: 1.8">
+            <li>The self supervised training with AuRL outperforms plain supervised training with 34.5 % lower MSE. Importantly, we also outperform methods that use visual information instead of audio.</li>
+            <li>On our real robot experiments, AuRL shows a 11.5% lower distance between the desired audio and generated audio. </li>
+            <li>In settings where we have limited data for training, self supervised pretraining significantly outperforms regular supervised training.</li>
+          </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <footer>
+  </footer>
 </body>
 
 </html>
