@@ -112,38 +112,46 @@
         </div>
       
       </div>
-
+      <style>
+        .fixed-size-video {
+          width: 250px; /* Adjust the width as per your requirement */
+          height: 290px; /* Adjust the height as per your requirement */
+        }
+      </style>
+      
       <div class="row">
-        <!-- <div class="col-1 hidden-sm"></div> -->
         <div class="col-0-5 hidden-sm"></div>  
-
-        <div class="col-4 ">
-          <iframe height="314" width="268" src="./mfiles/rattle-resynced.mp4" title="YouTube video player" frameborder="0"  style="  overflow: hidden" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      
+        <div class="col-4" style="margin-left:1%; margin-right:-2%">
+          <video class="img fixed-size-video" controls autoplay >
+            <source src="./mfiles/rattle-resynced.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="col-4" style="margin-left:0.5%; margin-right:-2%">
-          <iframe height="314"  width="249" src="./mfiles/tamborine.mp4" title="YouTube video player" frameborder="0" style="overflow: hidden" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+        <div class="col-4" style="margin-left:1%; margin-right:-2%">
+          <video class="img fixed-size-video" controls autoplay >
+            <source src="./mfiles/tamborine.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="col-4">
-          <iframe height="313"  width="243" src="./mfiles/fly-swatter-resynced.mp4" title="YouTube video player" frameborder="0"  style="overflow: hidden; padding-top:2px" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-
+        <div class="col-4" style="margin-left:1%; margin-right:-2%">
+          <video class="img fixed-size-video" controls autoplay >
+            <source src="./mfiles/fly-swatter-resynced.mp4" type="video/mp4">
+          </video>
         </div>
-
+      </div>
+      <div class="row">
+        <div class="col-1-5 hidden-sm"></div>  
+        <div class="col-4 hidden-sm" style="margin-top:3%; margin-left:1%; margin-right:-2%">
+          <video class="img fixed-size-video" controls autoplay >
+            <source src="./mfiles/striking-H-synced.mp4" type="video/mp4">
+          </video>
         </div>
-        <div class="row">
-
-          <div class="col-1-5 hidden-sm"></div>  
-          <div class="col-4 hidden-sm">
-            <iframe height="310" width="242" src="./mfiles/striking-H-synced.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-          </div>
-          <div class="col-4 hidden-sm">
-            <iframe height="305"  width="248" src="./mfiles/striking-V.mp4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-  
-          </div> 
-
-          </div>
-
+        <div class="col-4 hidden-sm" style="margin-top:3%; margin-left:1%; margin-right:-2%">
+          <video class="img fixed-size-video" controls autoplay >
+            <source src="./mfiles/striking-V.mp4" type="video/mp4">
+          </video>
+        </div> 
+      </div>
+      
       </div>
 
 
@@ -189,30 +197,6 @@
     
     </div>
     
-    
-    <div class="row">
-      <div class="col-1 hidden-sm"></div>
-      <div class="col-10">
-        <h2 class="center">Citation</h3>
-        <pre class="code">
-
-          @misc{
-            https://doi.org/10.48550/arxiv.2210.01116,
-            title = {That Sounds Right: Auditory Self-Supervision for Dynamic Robot Manipulation},
-            doi = {10.48550/ARXIV.2210.01116},
-            url = {https://arxiv.org/abs/2210.01116},
-            author = {Thankaraj, Abitha and Pinto, Lerrel},
-            keywords = {Robotics (cs.RO), Machine Learning (cs.LG), Sound (cs.SD), Audio and Speech Processing (eess.AS), FOS: Computer and information sciences, FOS: Computer and information sciences, FOS: Electrical engineering, electronic engineering, information engineering, FOS: Electrical engineering, electronic engineering, information engineering},
-            publisher = {arXiv},
-            year = {2022},
-          }
-          
-                 
-        </pre>
-      </div>
-      <div class="col-1 hidden-sm"></div>
-    </div>
-
 
   </div>
   <footer>
